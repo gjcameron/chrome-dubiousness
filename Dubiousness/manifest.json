@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Dubiousness",
+  "version": "0.0.1",
+  "description": "Experts Are Dubious at the NYT",
+  "homepage_url": "http://gregcameron.com",
+  "icons": { 
+    "16": "icons/icon16.png",
+    "32": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png" 
+  },
+  "permissions": [
+	  "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nytimes.com/*"
+      ],
+      "js": [
+        "lib/jquery.min.js",
+        "lib/jquery.initialize.min.js",
+        "src/inject.js"
+      ]
+    }
+  ]
+}
